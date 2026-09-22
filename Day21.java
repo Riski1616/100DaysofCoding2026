@@ -5,25 +5,33 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        // Memasukkan nilai pertama
-        System.out.print("Masukkan nilai A: ");
-        int A = input.nextInt();
+        System.out.print("Masukkan nama: ");
+        String nama = input.nextLine();
 
-        // Memasukkan nilai kedua
-        System.out.print("Masukkan nilai B: ");
-        int B = input.nextInt();
+        System.out.print("Masukkan umur: ");
+        String umurString = input.nextLine();
 
-        System.out.println("\nSebelum ditukar:");
-        System.out.println("A = " + A);
-        System.out.println("B = " + B);
+        System.out.print("Masukkan tinggi badan: ");
+        String tinggiString = input.nextLine();
 
-        // Menukar nilai menggunakan variabel sementara
-        int temp = A;
-        A = B;
-        B = temp;
+        System.out.print("Masukkan nilai: ");
+        String nilaiString = input.nextLine();
 
-        System.out.println("\nSetelah ditukar:");
-        System.out.println("A = " + A);
-        System.out.println("B = " + B);
+        System.out.print("Masukkan status mahasiswa (true/false): ");
+        String statusString = input.nextLine();
+
+        int umur = Integer.parseInt(umurString);
+        double tinggi = Double.parseDouble(tinggiString);
+        float nilai = Float.parseFloat(nilaiString);
+        boolean status = Boolean.parseBoolean(statusString);
+
+        System.out.println("\n=== DATA MAHASISWA ===");
+        System.out.println("Nama : " + nama);
+        System.out.println("Umur : " + umur);
+        System.out.println("Tinggi : " + tinggi + " cm");
+        System.out.println("Nilai : " + nilai);
+        System.out.println("Mahasiswa aktif : " + status);
+
+        input.close();
     }
 }
