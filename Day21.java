@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class App {
-    public static void main(String[] args) {
+public class Day21 {
+    public staticvoid main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
