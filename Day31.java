@@ -1,22 +1,31 @@
 import java.util.Scanner;
 
-public class Main {
+public class Day31 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Username benar (true/false): ");
-        boolean username = input.nextBoolean();
+        String username;
+        int password;
+        boolean akunDiblokir;
+        boolean aksesKhusus;
 
-        System.out.print("Password benar (true/false): ");
-        boolean password = input.nextBoolean();
+        System.out.print("Masukkan username: ");
+        username = input.nextLine();
+
+        System.out.print("Masukkan password: ");
+        password = input.nextInt();
 
         System.out.print("Akun diblokir (true/false): ");
-        boolean diblokir = input.nextBoolean();
+        akunDiblokir = input.nextBoolean();
 
         System.out.print("Memiliki akses khusus (true/false): ");
-        boolean aksesKhusus = input.nextBoolean();
+        aksesKhusus = input.nextBoolean();
 
-        boolean hasil = (username && password && !diblokir) || aksesKhusus;
+        boolean usernameBenar = username.equals("Riski");
+        boolean passwordBenar = password == 125;
+
+        boolean hasil = (usernameBenar && passwordBenar && !akunDiblokir)
+                        || aksesKhusus;
 
         System.out.println("Hasil: " + hasil);
     }
